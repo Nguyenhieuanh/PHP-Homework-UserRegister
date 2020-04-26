@@ -71,7 +71,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } ?>" value="<?php if (isset($_REQUEST['btn-submit']) && checkName($fullName)) {
             echo $fullName;
         } ?>" id="fullNameId" name="fullName" required>
-        <span data-placeholder="Full Name"></span>
+        <span data-placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
+            echo '';
+        } else echo "Full Name" ?>"></span>
     </div>
     <div class="txtb">
         <input type="text" name="username" placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
@@ -80,7 +82,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                value="<?php if (isset($_REQUEST['btn-submit']) && checkUserName($username)) {
                    echo $username;
                } ?>" required>
-        <span data-placeholder="User Name"></span>
+        <span data-placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
+            echo '';
+        } else echo "User Name" ?>"></span>
     </div>
     <div class="txtb">
         <input type="text" id="emailId" placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
@@ -88,7 +92,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } ?>" name="email" value="<?php if (isset($_REQUEST['btn-submit']) && checkEmail($email)) {
             echo $email;
         } ?>" required>
-        <span data-placeholder="Email"></span>
+        <span data-placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
+            echo '';
+        } else echo "Email" ?>"></span>
     </div>
     <div class="txtb">
         <input type="text" class="form-control" placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
@@ -97,14 +103,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                value="<?php if (isset($_REQUEST['btn-submit']) && checkPhone($phone)) {
                    echo $phone;
                } ?>" required>
-        <span data-placeholder="Phone Number"></span>
+        <span data-placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
+            echo '';
+        } else echo "Phone Number" ?>"></span>
 
     </div>
     <div class="txtb">
         <input type="password" name="password" placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
             echo $passwordErr;
         } ?>" id="passwordId" required>
-        <span data-placeholder="Password"></span>
+        <span data-placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
+            echo '';
+        } else echo "Password" ?>"></span>
     </div>
     <div>
     </div>
@@ -113,7 +123,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                placeholder="<?php if (isset($_REQUEST['btn-submit']) && $password !== $re_password) {
                    echo "Password mismatch!";
                }?>" name="re-psw" required>
-        <span data-placeholder = "Re-password"></span>
+        <span data-placeholder = "<?php if (isset($_REQUEST['btn-submit']) && $password !== $re_password) {
+            echo "";
+        } else echo "Re-password"; ?>"></span>
 
     </div>
     <label>
