@@ -19,7 +19,7 @@ $user = $userRegister->getUserByIndex($_SESSION['index']);
 </head>
 <body>
 <form method="post" class="login-form" enctype="multipart/form-data" style="width: 500px; height: 800px" action="../action/update.php">
-    <span onclick="location.href='index.php'" class="close">&times;</span>
+    <span onclick="location.href='profile.php'" class="close">&times;</span>
     <h1>Edit Profile</h1>
     <div class="txtb">
         <input type="text" value="<?php echo $user->getFullName() ?>" id="fullNameId" name="fullName"

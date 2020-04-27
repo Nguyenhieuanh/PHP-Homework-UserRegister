@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $username = $_REQUEST['username'];
         $password = $_REQUEST['password'];
         if ($username == '' || $password == '') {
-            header("Location: index.php");
+            header("Location: profile.php");
         } else {
             $userRegister = new UserRegister('data/userData.json');
             $userList = $userRegister->getUsers();
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if ($username == $user->getUsername() && $password == $user->getPassword()) {
                     $_SESSION['username'] = $username;
                     $_SESSION['index'] = $index;
-                    header("Location: view/index.php");
+                    header("Location: view/profile.php");
                 } else {
                     $msg = "*Username or password incorrect*";
                 }

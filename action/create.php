@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $userRegister = new UserRegister('../data/userData.json');
             $user = new User($fullName, $username, $email, $phone, $password);
             $userRegister->addNewUser($user);
-            header("Location: ../index.php");
+            header("Location: ../profile.php");
         }
     }
 }

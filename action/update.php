@@ -32,6 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user->setEmail($email);
     $user->setPhone($phone);
     $userRegister->updateUser($index, $user);
-    header("Location:../view/index.php");
+    header("Location:../view/profile.php");
 }
 
