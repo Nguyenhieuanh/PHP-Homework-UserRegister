@@ -25,21 +25,23 @@ $user = $userRegister->getUserByIndex($_SESSION['index']);
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
+<form action="#" method="post" class="login-form">
+    <h1>Profile</h1>
 <?php
-echo "Successful login!!!";
-echo "<br>";
-echo 'Full Name:' . $user->getFullName();
-echo "<br>";
-echo 'User Name:' . $user->getUsername();
-echo "<br>";
-echo 'Email:' . $user->getEmail();
-echo "<br>";
-echo 'Phone Number:' . $user->getPhone();
+echo "<br><br>";
+echo 'Full Name: ' . $user->getFullName();
+echo "<br><br>";
+echo 'User Name: ' . $user->getUsername();
+echo "<br><br>";
+echo 'Email: ' . $user->getEmail();
+echo "<br><br>";
+echo 'Phone Number: ' . $user->getPhone();
+echo "<br><br>";
 ?>
-<form method="post">
-    <button type="submit" name="btn-logout">Log out</button>
+    <button type="submit" name="btn-logout" class="logbtn">Log out</button>
 </form>
 
 </body>
