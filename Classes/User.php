@@ -10,7 +10,7 @@ class User
     protected $password;
     protected $image;
 
-    public function __construct($fullName, $username, $email, $phone, $password, $image = '')
+    public function __construct($fullName, $username, $email, $phone, $password, $image = 'default-avatar.png')
     {
         $this->fullName = $fullName;
         $this->username = $username;
