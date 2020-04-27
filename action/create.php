@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
-<form method="post" class="login-form" style="width: 500px; height: 800px">
+<form method="post" class="login-form" style="width: 600px; height: 800px">
     <span onclick="location.href='../index.php'" class="close" >&times;</span>
     <h1>Register</h1>
     <p>Please fill in this form to create an account.</p>
