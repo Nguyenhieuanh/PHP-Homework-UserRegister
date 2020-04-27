@@ -8,14 +8,16 @@ class User
     protected $email;
     protected $phone;
     protected $password;
+    protected $image;
 
-    public function __construct($fullName, $username, $email, $phone, $password)
+    public function __construct($fullName, $username, $email, $phone, $password, $image = '')
     {
         $this->fullName = $fullName;
         $this->username = $username;
         $this->email = $email;
         $this->phone = $phone;
         $this->password = $password;
+        $this->image = $image;
     }
 
     /**
@@ -96,6 +98,22 @@ class User
     public function getPassword()
     {
         return $this->password;
+    }
+
+    /**
+     * @param null $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    /**
+     * @return null
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 
 }

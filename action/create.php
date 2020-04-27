@@ -65,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <span onclick="location.href='../index.php'" class="close" >&times;</span>
     <h1>Register</h1>
     <p>Please fill in this form to create an account.</p>
+
     <div class="txtb">
         <input type="text" placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
             echo $fullNameErr;
@@ -75,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo '';
         } else echo "Full Name" ?>"></span>
     </div>
+
     <div class="txtb">
         <input type="text" name="username" placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
             echo $usernameErr;
@@ -86,6 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo '';
         } else echo "User Name" ?>"></span>
     </div>
+
     <div class="txtb">
         <input type="text" id="emailId" placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
             echo $emailErr;
@@ -96,6 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo '';
         } else echo "Email" ?>"></span>
     </div>
+
     <div class="txtb">
         <input type="text" class="form-control" placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
             echo $phoneErr;
@@ -106,8 +110,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <span data-placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
             echo '';
         } else echo "Phone Number" ?>"></span>
-
     </div>
+
     <div class="txtb">
         <input type="password" name="password" placeholder="<?php if (isset($_REQUEST['btn-submit'])) {
             echo $passwordErr;
@@ -116,8 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo '';
         } else echo "Password" ?>"></span>
     </div>
-    <div>
-    </div>
+
     <div class="txtb">
         <input type="password" id="psw-repeat"
                placeholder="<?php if (isset($_REQUEST['btn-submit']) && $password !== $re_password) {
@@ -128,10 +131,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else echo "Re-password"; ?>"></span>
 
     </div>
+
     <label>
         <input type="checkbox" required>
         <span>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</span>
     </label>
+
     <br>
     <br>
     <button type="submit" name="btn-submit" class="logbtn">Register</button>

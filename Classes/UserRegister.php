@@ -31,7 +31,8 @@ class UserRegister
             'username' => $user->getUserName(),
             'email' => $user->getEmail(),
             'phone' => $user->getPhone(),
-            'password' => $user->getPassword()
+            'password' => $user->getPassword(),
+            'image' => $user->getImage()
         ];
         array_push($users, $data);
         $this->saveDataJson($users);
@@ -41,7 +42,7 @@ class UserRegister
     {
         $users = $this->getDataJson();
         foreach ($users as $user) {
-            $user = new User($user->fullName, $user->username, $user->email, $user->phone, $user->password);
+            $user = new User($user->fullName, $user->username, $user->email, $user->phone, $user->password, $user->image);
             array_push($this->userList, $user);
         }
         return $this->userList;
@@ -54,7 +55,23 @@ class UserRegister
             $dataArr[$index]->username,
             $dataArr[$index]->email,
             $dataArr[$index]->phone,
-            $dataArr[$index]->password);
+            $dataArr[$index]->password,
+            $dataArr[$index]->image);
+    }
+
+    public function updateUser($index, $user)
+    {
+        $users = $this->getDataJson();
+        $data = [
+            'fullName' => $user->getFullName(),
+            'username' => $user->getUserName(),
+            'email' => $user->getEmail(),
+            'phone' => $user->getPhone(),
+            'password' => $user->getPassword(),
+            'image' => $user->getImage()
+        ];
+        $users[$index] = $data;
+        $this->saveDataJson($users);
     }
 
 }
