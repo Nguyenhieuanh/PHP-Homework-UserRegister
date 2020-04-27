@@ -4,13 +4,13 @@ session_start();
 include_once '../Classes/UserRegister.php';
 
 if (!isset($_SESSION['username'])) {
-    header("Location:../profile.php");
+    header("Location:../index.php");
 }
 
 if ($_SERVER['REQUEST_METHOD']) {
     if (isset($_REQUEST['btn-logout'])) {
         session_destroy();
-        header("Location:../profile.php");
+        header("Location:../index.php");
     }
 }
 
