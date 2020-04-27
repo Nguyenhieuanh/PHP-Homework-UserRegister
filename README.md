@@ -3,7 +3,8 @@
 ### Bài tập về nhà
 
 #### Nội dung
-##### 1.Xây dựng chức năng đăng ký người dung thoả mãn
+
+#### 1.Xây dựng chức năng đăng ký người dung thoả mãn
 
 **1.1 Password**
 * Có ít nhất 8 ký tự trở lên
